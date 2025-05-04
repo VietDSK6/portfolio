@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viet's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">home</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <div class="theme-toggles">
+                <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>hi viet here 👋</h1>
+                <p class="bio">19-year-old software developer from Viet Nam 🇻🇳</p>
+                <p class="bio-detail">I like to develop full-stack, self-hosting homelabs and get coding advice from my !!!</p>
+                
+                <div class="social-links">
+                    <a href="resume.pdf" class="btn resume-btn">Resume <i class="fa-regular fa-file-lines"></i></a>
+                    <a href="www.linkedin.com/in/vietds" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/VietDSK6" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:vietdsptit@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="img/avtr.png" alt="Ted's profile picture">
+            </div>
+        </section>
+
+        <!-- Tabs Section -->
+        <section class="tabs-section">
+            <div class="tabs">
+                <button class="tab active" data-tab="work">Work</button>
+                <button class="tab" data-tab="education">Education</button>
+            </div>
+            
+            <div class="tab-content active" id="work-content">
+                <!-- Work Experience -->
+                <div class="experience-item">
+                    <div class="experience-logo">
+                        <img src="img/Logo_PTIT_University.png" alt="PTIT CNS">
+                    </div>
+                    <div class="experience-details">
+                        <div class="experience-date">Jan 2025 - Present</div>
+                        <h3>PTIT CNS</h3>
+                        <div class="experience-role">App Developer</div>
+                        <ul class="experience-bullets">
+                            <li>Developed Cong dan so Thai Binh - Zalo Mini App the central platform for building the province’s digital society by enabling accurate citizen identification and making it easier to access online public services.</li>
+                            <li>Work fluently with Backend</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="education-content">
+                <!-- Education -->
+                <div class="experience-item">
+                    <div class="experience-logo">
+                        <img src="img/Logo_PTIT_University.png" alt="PTIT">
+                    </div>
+                    <div class="experience-details">
+                        <div class="experience-date">Sep 2024 - Apr 2028</div>
+                        <h3>Posts and Telecommunications Institute of Technology</h3>
+                        <div class="experience-role">Bachelor of Information Technology</div>
+                        <ul class="experience-bullets">
+                            <li>Have something</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Final Year Project</span>
+                            <span class="tag">2nd Year Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="section-header">
+                <h2>featured projects</h2>
+                <a href="#" class="view-more">view more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/portfolio.png" alt="TT4D Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Portfolio</h3>
+                        <p>This is what u currently seeing</p>
+                        <div class="tech-stack">
+                            <span class="tech">HTML</span>
+                            <span class="tech">CSS</span>
+                            <span class="tech">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/calculator.webp" alt="Tradingview Telegram Alerts Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>AllInCalculator</h3>
+                        <p>Calculator with a lot of convenient feature like BMI, Date & time, Health, ...</p>
+                        <div class="tech-stack">
+                            <span class="tech">React Native</span>
+                            <span class="tech">Expo</span>
+                            <span class="tech">Supabase</span>
+                            <span class="tech">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn">Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Posts -->
+        <section class="recent-posts">
+            <div class="section-header">
+                <h2>recent posts</h2>
+                <a href="#" class="view-more">view more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="posts-list">
+                <div class="post-item">
+                    <div class="post-content">
+                        <h3><a href="#">Introducing AllInCalculator – My Calculator App can do everything</a></h3>
+                        <p>This is like item of Doraemon you can do everything you want with this calculator app.</p>
+                    </div>
+                    <div class="post-date">April 21, 2025</div>
+                </div>
+                
+                <div class="post-item">
+                    <div class="post-content">
+                        <h3><a href="#">My Portfolio is Live: Here's What I Learned</a></h3>
+                        <p>From a sleek, minimal design to an integrated AI chatbot. It even got a live review from one of my favorite creators!</p>
+                    </div>
+                    <div class="post-date">September 27, 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="copyright">© 2025 vietdosy.me</div>
+            <div class="footer-social">
+                <a href="www.linkedin.com/in/vietds" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/VietDSK6" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:vietdsptit@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Viet's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="contact.html" class="active">contact</a></li>
+            </ul>
+            <div class="theme-toggles">
+                <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </nav>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h1>contact me.</h1>
+            
+            <div class="minimal-contact-form">
+                <form id="contact-form">
+                    <div class="minimal-form-row">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea id="message" name="message" rows="5" placeholder="Leave feedback about the site, career opportunities or just to say hello etc. (BTW, I can't reply if the email provided is not real!)" required></textarea>
+                    <button type="submit" class="minimal-submit-btn">Send Message <i class="fas fa-arrow-right"></i></button>
+                    <p class="minimal-disclaimer">By submitting this form, I agree to the privacy policy.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="copyright">© 2025 vietdosy.me</div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/vietds" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/VietDSK6" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:vietdsptit@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
