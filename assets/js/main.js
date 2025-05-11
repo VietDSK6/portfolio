@@ -1,3 +1,41 @@
+// Apply theme immediately to prevent flash
+(function() {
+    // Get theme from localStorage or default to user preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Use saved theme if exists, otherwise use system preference
+    const isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
+    
+    // Apply theme before page renders
+    applyThemeEarly(isDarkMode);
+})();
+
+// Apply theme immediately without waiting for DOM elements
+function applyThemeEarly(isDarkMode) {
+    if (isDarkMode) {
+        // Dark theme colors
+        document.documentElement.style.setProperty('--bg-color', '#0a0a0f');
+        document.documentElement.style.setProperty('--card-bg', '#18181b');
+        document.documentElement.style.setProperty('--text-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-secondary', '#a1a1aa');
+        document.documentElement.style.setProperty('--border-color', '#27272a');
+        document.documentElement.style.setProperty('--tag-bg', '#27272a');
+        document.documentElement.style.setProperty('--tag-text', '#ffffff');
+    } else {
+        // Light theme colors
+        document.documentElement.style.setProperty('--bg-color', '#f8fafc');
+        document.documentElement.style.setProperty('--card-bg', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#0f172a');
+        document.documentElement.style.setProperty('--text-secondary', '#64748b');
+        document.documentElement.style.setProperty('--border-color', '#e2e8f0');
+        document.documentElement.style.setProperty('--tag-bg', '#e2e8f0');
+        document.documentElement.style.setProperty('--tag-text', '#0f172a');
+    }
+    
+    // Store the current mode
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+}
+
 // Wait for DOM to be fully loaded before executing code
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
@@ -9,38 +47,49 @@ document.addEventListener('DOMContentLoaded', function() {
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     if (!themeToggle) return;
-    
-    let isDarkMode = true; // Start with dark mode
-    
+    // Retrieve theme mode from localStorage or default to dark mode
+    let isDarkMode = localStorage.getItem('theme') === 'dark';
+
+    // Apply the saved theme mode on page load
+    applyTheme(isDarkMode);
+
     themeToggle.addEventListener('click', () => {
         isDarkMode = !isDarkMode; // Toggle the theme state
-        
-        if (isDarkMode) {
-            // Switch to dark mode
-            document.documentElement.style.setProperty('--bg-color', '#0a0a0f');
-            document.documentElement.style.setProperty('--card-bg', '#18181b');
-            document.documentElement.style.setProperty('--text-color', '#ffffff');
-            document.documentElement.style.setProperty('--text-secondary', '#a1a1aa');
-            document.documentElement.style.setProperty('--border-color', '#27272a');
-            document.documentElement.style.setProperty('--tag-bg', '#27272a');
-            document.documentElement.style.setProperty('--tag-text', '#ffffff');
-            
-            // Change icon to moon
-            themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        } else {
-            // Switch to light mode
-            document.documentElement.style.setProperty('--bg-color', '#f8fafc');
-            document.documentElement.style.setProperty('--card-bg', '#ffffff');
-            document.documentElement.style.setProperty('--text-color', '#0f172a');
-            document.documentElement.style.setProperty('--text-secondary', '#64748b');
-            document.documentElement.style.setProperty('--border-color', '#e2e8f0');
-            document.documentElement.style.setProperty('--tag-bg', '#e2e8f0');
-            document.documentElement.style.setProperty('--tag-text', '#0f172a');
-            
-            // Change icon to sun
-            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        }
+        applyTheme(isDarkMode);
+
+        // Save the current theme mode to localStorage
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     });
+}
+
+function applyTheme(isDarkMode) {
+    if (isDarkMode) {
+        // Switch to dark mode
+        document.documentElement.style.setProperty('--bg-color', '#0a0a0f');
+        document.documentElement.style.setProperty('--card-bg', '#18181b');
+        document.documentElement.style.setProperty('--text-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-secondary', '#a1a1aa');
+        document.documentElement.style.setProperty('--border-color', '#27272a');
+        document.documentElement.style.setProperty('--tag-bg', '#27272a');
+        document.documentElement.style.setProperty('--tag-text', '#ffffff');
+
+        // Change icon to moon
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    } else {
+        // Switch to light mode
+        document.documentElement.style.setProperty('--bg-color', '#f8fafc');
+        document.documentElement.style.setProperty('--card-bg', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#0f172a');
+        document.documentElement.style.setProperty('--text-secondary', '#64748b');
+        document.documentElement.style.setProperty('--border-color', '#e2e8f0');
+        document.documentElement.style.setProperty('--tag-bg', '#e2e8f0');
+        document.documentElement.style.setProperty('--tag-text', '#0f172a');
+
+        // Change icon to sun
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
 }
 
 function initTabSwitching() {

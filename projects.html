@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            // Get theme preference and apply it immediately
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.style.setProperty('--bg-color', '#f8fafc');
+                document.documentElement.style.setProperty('--card-bg', '#ffffff');
+                document.documentElement.style.setProperty('--text-color', '#0f172a');
+                document.documentElement.style.setProperty('--text-secondary', '#64748b');
+                document.documentElement.style.setProperty('--border-color', '#e2e8f0');
+                document.documentElement.style.setProperty('--tag-bg', '#e2e8f0');
+                document.documentElement.style.setProperty('--tag-text', '#0f172a');
+                
+                // Update icon in case it's already in the DOM
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+        })();
+    </script>
 </head>
 <body>
     <div class="container">
