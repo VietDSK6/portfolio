@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
     <!-- Prevent theme flash -->
     <script>
         (function() {
@@ -50,11 +54,11 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1>hi viet here 👋</h1>
-                <p class="bio">19-year-old software developer from Viet Nam 🇻🇳</p>
-                <p class="bio-detail">I like to develop full-stack, self-hosting homelabs and get coding advice from my nephew!!!</p>
+                <h1 class="fade-in">hi viet here 👋</h1>
+                <p class="bio fade-in delay-100">19-year-old software developer from Viet Nam 🇻🇳</p>
+                <p class="bio-detail fade-in delay-200">I like to develop full-stack, self-hosting homelabs and get coding advice from my nephew!!!</p>
                 
-                <div class="social-links">
+                <div class="social-links fade-in delay-300">
                     <a href="resume.pdf" class="btn resume-btn">Resume <i class="fa-regular fa-file-lines"></i></a>
                     <a href="https://linkedin.com/in/vietds" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://github.com/VietDSK6" class="social-icon"><i class="fa-brands fa-github"></i></a>
@@ -120,7 +124,7 @@
             </div>
             
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card fade-in">
                     <div class="project-image">
                         <img src="assets/images/portfolio.png" alt="Portfolio Project Screenshot">
                     </div>
@@ -138,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card fade-in delay-100">
                     <div class="project-image">
                         <img src="assets/images/cdstb.png" alt="Công dân số thái bình">
                     </div>
@@ -166,20 +170,20 @@
             </div>
             
             <div class="posts-list">
-                <div class="post-item">
-                    <div class="post-content">
-                        <h3><a href="#">Introducing AllInCalculator – My Calculator App can do everything</a></h3>
-                        <p>This is like item of Doraemon you can do everything you want with this calculator app.</p>
-                    </div>
-                    <div class="post-date">April 21, 2025</div>
-                </div>
-                
-                <div class="post-item">
+                <div class="post-item fade-in">
                     <div class="post-content">
                         <h3><a href="#">My Portfolio is Live: Here's What I Learned</a></h3>
                         <p>From a sleek, minimal design to an integrated AI chatbot. It even got a live review from one of my favorite creators!</p>
                     </div>
-                    <div class="post-date">September 27, 2024</div>
+                    <div class="post-date">May 17, 2025</div>
+                </div>
+                
+                <div class="post-item fade-in">
+                    <div class="post-content">
+                        <h3><a href="blog-hello-world.html">Hello World</a></h3>
+                        <p>This is my testing blog i want to testing how it display</p>
+                    </div>
+                    <div class="post-date">May 10, 2025</div>
                 </div>
             </div>
         </section>
@@ -193,6 +197,11 @@
                 <a href="mailto:vietdsptit@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
     </div>
 
     <script src="assets/js/main.js"></script>

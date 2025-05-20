@@ -22,6 +22,9 @@
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
+
+    /* Smooth transitions for theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -142,6 +145,11 @@ h1 {
     height: auto;
     border-radius: 12px;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.05);
 }
 
 .social-links {
@@ -162,10 +170,30 @@ h1 {
     text-decoration: none;
     font-size: 14px;
     transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover {
     background-color: var(--border-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover:after {
+    opacity: 1;
 }
 
 .btn i {
@@ -184,10 +212,30 @@ h1 {
     border-radius: 6px;
     transition: background-color 0.3s;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .social-icon:hover {
     background-color: var(--border-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover:after {
+    opacity: 1;
 }
 
 .social-icon i {
@@ -389,6 +437,12 @@ h1 {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
@@ -492,8 +546,6 @@ h1 {
 .page-header h1 {
     margin-bottom: 10px;
 }
-
-
 
 /* Projects Full Grid */
 .full-grid {
@@ -690,4 +742,64 @@ footer {
     .experience-bullets li {
         font-size: 14px;
     }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
 }

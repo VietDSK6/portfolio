@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Viet's Portfolio | Software Developer from Vietnam</title>
+    <meta name="description" content="My first blog post about getting started with my personal portfolio and web development journey.">
+    <meta name="keywords" content="Viet, blog, hello world, software development, portfolio, web development">
+    <meta name="author" content="Viet">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            // Get theme preference and apply it immediately
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.style.setProperty('--bg-color', '#f8fafc');
+                document.documentElement.style.setProperty('--card-bg', '#ffffff');
+                document.documentElement.style.setProperty('--text-color', '#0f172a');
+                document.documentElement.style.setProperty('--text-secondary', '#64748b');
+                document.documentElement.style.setProperty('--border-color', '#e2e8f0');
+                document.documentElement.style.setProperty('--tag-bg', '#e2e8f0');
+                document.documentElement.style.setProperty('--tag-text', '#0f172a');
+                
+                // Update icon in case it's already in the DOM
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+        })();
+    </script>
+    <style>
+        /* Blog Post Specific Styles */
+        .blog-post {
+            margin: 20px 0 40px;
+        }
+        
+        .blog-post-header {
+            margin-bottom: 30px;
+        }
+        
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post-meta {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-post-content {
+            line-height: 1.8;
+        }
+        
+        .blog-post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .blog-post-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+        }
+        
+        .blog-post-content h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+        }
+        
+        .blog-post-content ul, .blog-post-content ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .blog-post-content li {
+            margin-bottom: 8px;
+        }
+        
+        .blog-post-content pre {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .blog-post-content code {
+            font-family: monospace;
+            background-color: var(--card-bg);
+            padding: 2px 5px;
+            border-radius: var(--radius-sm);
+        }
+        
+        .blog-post-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .blog-post-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .blog-post-content blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        
+        .blog-post-content img {
+            max-width: 100%;
+            border-radius: var(--radius-md);
+            margin: 20px 0;
+        }
+        
+        .blog-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .blog-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        
+        .blog-nav a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="blog.html" class="active">blog</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <div class="theme-toggles">
+                <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </nav>
+
+        <!-- Blog Post Content -->
+        <article class="blog-post">
+            <header class="blog-post-header">
+                <h1>Hello World</h1>
+                <div class="blog-post-meta">
+                    <span>May 10, 2025</span> • 
+                    <span>3 min read</span>
+                </div>
+            </header>
+
+            <div class="blog-post-content">
+                <p>Welcome to my very first blog post! As a software developer, it's only fitting that I start with the traditional "Hello World" introduction. This blog will serve as a platform for sharing my thoughts, experiences, and insights about software development, projects I'm working on, and technologies I'm exploring.</p>
+                
+                <h2>Why I Started This Blog</h2>
+                <p>For years, I've been consuming content from various tech blogs and learning from the experiences shared by other developers. Now, it's time for me to contribute to the community by sharing my own journey. Here's why I decided to start blogging:</p>
+                
+                <ul>
+                    <li><strong>Knowledge sharing:</strong> Writing about what I learn helps solidify my understanding and might help others facing similar challenges.</li>
+                    <li><strong>Building in public:</strong> Documenting my process and progress creates accountability and allows for feedback.</li>
+                    <li><strong>Creating a personal record:</strong> Having a log of my growth and the problems I've solved will be valuable to look back on.</li>
+                </ul>
+                
+                <h2>Setting Up My Portfolio</h2>
+                <p>Creating this portfolio website has been an exciting journey. I went with a clean, minimalist design that focuses on content and readability. Here's a quick look at the tech stack I used:</p>
+                
+                <pre><code>// Tech Stack
+- HTML5
+- CSS3 (with CSS variables for theming)
+- JavaScript (for interactions and dark/light mode)
+- Responsive design for all devices</code></pre>
+                
+                <p>One of the features I'm particularly proud of is the dark/light mode toggle that respects the user's system preferences but also allows for manual switching.</p>
+                
+                <h2>My Development Philosophy</h2>
+                <p>As a developer, I believe in writing clean, maintainable code that solves real problems. I value:</p>
+                
+                <blockquote>
+                    Simplicity over complexity. Readability over cleverness. Function over form (though form is still important!).
+                </blockquote>
+                
+                <p>These principles guide my approach to both personal and professional projects, and I hope to explore them more deeply in future posts.</p>
+                
+                <h2>What's Next?</h2>
+                <p>This is just the beginning! In upcoming posts, I plan to dive into:</p>
+                
+                <ul>
+                    <li>Detailed walkthroughs of my projects</li>
+                    <li>Tutorials on technologies I'm familiar with</li>
+                    <li>Challenges I've faced and how I overcame them</li>
+                    <li>Insights from books, courses, and conferences</li>
+                </ul>
+                
+                <p>I'm also open to suggestions! If there's a specific topic you'd like me to cover, feel free to reach out through the contact page.</p>
+                
+                <h2>Let's Connect</h2>
+                <p>I'm always happy to connect with fellow developers and tech enthusiasts. You can find me on <a href="https://linkedin.com/in/vietds">LinkedIn</a>, <a href="https://github.com/VietDSK6">GitHub</a>, or drop me an email at <a href="mailto:vietdsptit@gmail.com">vietdsptit@gmail.com</a>.</p>
+                
+                <p>Thanks for reading my first post! Stay tuned for more content coming soon.</p>
+            </div>
+            
+            <!-- Post Navigation -->
+            <div class="blog-nav">
+                <a href="blog.html"><i class="fa-solid fa-arrow-left"></i> Back to All Posts</a>
+                <a href="#">Next Post <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <!-- Footer -->
+        <footer>
+            <div class="copyright">© 2025 vietdosy.me</div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/vietds" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/VietDSK6" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:vietdsptit@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
